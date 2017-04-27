@@ -1,0 +1,29 @@
+<!-- Intentially reamoved header -->
+<ion-content padding>
+  <h2 class="center">Currency Convertor</h2>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>From</ion-label>
+      <ion-select [(ngModel)]="from">
+        <ion-option *ngFor="let item of currencyList"  
+                    value="{{item.name}}" selected="">
+                    {{item.name}} 
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>To</ion-label>
+      <ion-select [(ngModel)]="to">
+        <ion-option *ngFor="let item of currencyList"  
+                    value="{{item.name}}" selected="">
+                    {{item.name}} 
+        </ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <button (click)="convert()" ion-button full color="primary">Calculate</button>
+
+  <h1 class="center">{{result}}</h1>
+</ion-content>

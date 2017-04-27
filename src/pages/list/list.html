@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="primary" no-border-bottom>
+    <ion-title>
+      Currency List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+  	<ion-item>
+	    <ion-label>Select Base Currency</ion-label>
+	    <ion-select [(ngModel)]="baseCurrency" (ionChange)="setBaseCurrency()">
+	    	<ion-option selected="true" value="{{baseCurrency}}">
+	    							{{baseCurrency}} 
+	    	</ion-option>
+	    	<ion-option *ngFor="let item of currencyList"  
+	    							value="{{item.name}}" selected="">
+	    							{{item.name}} 
+	    	</ion-option>
+	    </ion-select>
+	  </ion-item>
+	  <ion-list-header>
+	    Currencies
+	  </ion-list-header>
+  	<ion-item *ngFor="let curr of currencyList">
+	    <h2>{{curr.name}}</h2>
+	    <h3 color="primary" item-right>{{curr.price}}</h3>
+	  </ion-item>
+  </ion-list>
+</ion-content>

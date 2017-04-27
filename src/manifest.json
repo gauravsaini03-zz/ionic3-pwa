@@ -1,0 +1,14 @@
+{
+  "name": "Currency Converter PWA",
+  "short_name": "Currency",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "assets/logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#db0000",
+  "theme_color": "#000000",
+  "gcm_sender_id": "124917710568"
+}
